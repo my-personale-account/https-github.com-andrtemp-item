@@ -24,7 +24,11 @@ class Main extends Controller
         $nameImage = public_path() . '/assets/saved/'  . rand(000000000, 999999999) .'.png';
         $avatar_uri = file_put_contents($nameImage, $image);
 
-        //Mail::to("andrey@innstant.com")->send(new Mailer());
+        $class = new \StdClass();
+        $class->image = $nameImage;
+        $class->info = $contact;
+
+        Mail::to($mail)->send(new Mailer($class));
         return view('success');
     }
 }

@@ -21,10 +21,12 @@ class Mailer extends Mailable
     /**
      * Create a new message instance.
      *
+     * @param \stdClass $class
      * @return void
      */
-    public function __construct()
+    public function __construct($class)
     {
+        $this->demo = $class;
     }
 
     /**
@@ -36,17 +38,9 @@ class Mailer extends Mailable
     {
         return $this->from('andr.evich11@gmail.com')
             ->view('mails.mail')
-//            ->text('mails.demo_plain')
-            ->with(
-                [
-                    'name' => 'Иван',
-                    'sender' => 'Степан',
-                    'testVarOne' => '1',
-                    'testVarTwo' => '2',
-                ]);
-//            ->attach(public_path('/images').'/demo.jpg', [
-//                'as' => 'demo.jpg',
-//                'mime' => 'image/jpeg',
-//            ]);
+            ->attach($this->demo->image, [
+                'as' => 'template.png',
+                'mime' => 'image/png',
+            ]);
     }
 }
