@@ -12,10 +12,10 @@
                             Тип
                         </label>
                         <select name="type" id="type" class="form-control">
-                            <option disabled></option>
-                            <option>не торцованная</option>
-                            <option>торцованная</option>
-                            <option>спираль</option>
+                            <option disabled selected></option>
+                            <option value="не торцованная">не торцованная</option>
+                            <option value="торцованная">торцованная</option>
+                            <option value="спираль">спираль</option>
                         </select>
                     </div>
                     <div class="fom-group">
@@ -23,11 +23,11 @@
                             Выбор материала
                         </label>
                         <select name="material" id="material" class="form-control">
-                            <option disabled></option>
-                            <option>60С2А</option>
-                            <option>51ХФА</option>
-                            <option>ГОСТ 9389-75</option>
-                            <option>12Х18 Н10Т</option>
+                            <option disabled selected></option>
+                            <option value="60С2А">60С2А</option>
+                            <option value="51ХФА">51ХФА</option>
+                            <option value="ГОСТ 9389-75">ГОСТ 9389-75</option>
+                            <option value="12Х18 Н10Т">12Х18 Н10Т</option>
                         </select>
                     </div>
                     <div class="fom-group">
@@ -35,20 +35,69 @@
                             Диаметер сечения
                         </label>
                         <select name="diameter" id="diameter" class="form-control">
-                            <option disabled></option>
-                            <option>1</option>
-                            <option>1.5</option>
+                            <option disabled selected></option>
+                            <option value="1">1</option>
+                            <option value="1.5">1.5</option>
                         </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="out_diameter">
+                            Наружный диаметер
+                        </label>
+                        <input type="number" class="form-control" id="out_diameter" name="out_diameter">
+                    </div>
+                    <div class="form-group">
+                        <label for="height">
+                            Высота
+                        </label>
+                        <input type="number" class="form-control" id="height" name="height">
+                    </div>
+                    <div class="form-group">
+                        <label for="number_circle">
+                            Количество полных витков
+                        </label>
+                        <input type="number" class="form-control" id="number_circle" name="number_circle">
+                    </div>
+                    <div class="fom-group">
+                        <label for="surface">
+                            Покрытие
+                        </label>
+                        <select name="surface" id="surface" class="form-control">
+                            <option disabled selected></option>
+                            <option value="Масло К-17"> Масло К-17</option>
+                            <option value="Цинк"> Цинк</option>
+                            <option value="Кадмий"> Кадмий</option>
+                            <option value="ХИМ.ФОС.прм."> ХИМ.ФОС.прм.</option>
+                            <option value="ХИМ.ОКС.прм."> ХИМ.ОКС.прм.</option>
+                            <option value="Эмаль П.ПЭ"> Эмаль П.ПЭ</option>
+                        </select>
+                    </div>
+                    <div class="fom-group">
+                        <label for="direction">
+                            Направление навивки
+                        </label>
+                        <select name="direction" id="direction" class="form-control">
+                            <option disabled selected></option>
+                            <option value="Правое"> Правое</option>
+                            <option value="Левое"> Левое</option>
+                            <option value="Любое"> Любое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">
+                            E-mail
+                        </label>
+                        <input type="email" name="mail" id="mail" class="form-control" data-value="mail"/>
                     </div>
                     <div class="form-group">
                         <label for="contact">
                             Ваши реквизиты
                         </label>
-                        <textarea name="contact" id="contact" class="form-control"></textarea>
+                        <textarea name="contact" id="contact" class="form-control" data-value="contact_info"></textarea>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-warning" id="preview">Превью</button>
-                        <button class="btn btn-success" type="submit">Отправить на почту</button>
+                        <button class="btn btn-success" type="submit" id="submit">Отправить на почту</button>
                         <button class="btn btn-danger" type="reset">Сбросить</button>
                     </div>
                 </form>
@@ -58,7 +107,5 @@
                 <canvas id="my_image"></canvas>
             </div>
         </div>
-
-        {{--<a id="download" download="myImage.jpg" href="" onclick="download_img(this);">Download to myImage.jpg</a>--}}
     </div>
 @endsection

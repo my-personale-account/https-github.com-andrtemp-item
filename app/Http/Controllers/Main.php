@@ -14,7 +14,17 @@ class Main extends Controller
     }
 
     public function send(){
-        Mail::to("andrey@innstant.com")->send(new Mailer());
+        $request = \request();
+        $image = $request->post('image');
+        $image = str_replace('data:image/png;base64,', '', $image);
+        $image = str_replace(' ', '+', $image);
+        $image = base64_decode($image);
+        $mail = $request->post('mail');
+        $contact = $request->post('contact');
+        $nameImage = public_path() . '/assets/saved/'  . rand(000000000, 999999999) .'.png';
+        $avatar_uri = file_put_contents($nameImage, $image);
+
+        //Mail::to("andrey@innstant.com")->send(new Mailer());
         return view('success');
     }
 }
