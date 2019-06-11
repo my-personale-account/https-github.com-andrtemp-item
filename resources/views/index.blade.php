@@ -56,7 +56,7 @@
                         <label for="number_circle">
                             Количество полных витков
                         </label>
-                        <input type="number" class="form-control" id="number_circle" name="number_circle">
+                        <input type="number" min="3" class="form-control" id="number_circle" name="number_circle">
                     </div>
                     <div class="fom-group">
                         <label for="surface">
@@ -78,9 +78,9 @@
                         </label>
                         <select name="direction" id="direction" class="form-control">
                             <option disabled selected></option>
-                            <option value="Правое"> Правое</option>
-                            <option value="Левое"> Левое</option>
-                            <option value="Любое"> Любое</option>
+                            <option value="Правое">Правое</option>
+                            <option value="Левое">Левое</option>
+                            <option value="Любое">Любое</option>
                         </select>
                     </div>
                     <div class="form-group">

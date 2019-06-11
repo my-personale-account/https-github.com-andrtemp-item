@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
             number_circle = parseInt(document.getElementById("number_circle").value),
             surface = document.getElementById("surface").value,
             direction = document.getElementById("direction").value;
-        const n = number_circle - 2,  G = material === '12Х18Н10Т' ? 68670 : 78480, C = ((G * Math.pow(d,4)) / (8 * D * Math.pow(3,n))).toFixed(4);
+        const n = number_circle - 2,  G = material === '12Х18Н10Т' ? 68670 : 78480, C = ((G * Math.pow(d,4)) / (8 * D * Math.pow(3,n))).toFixed(1);
         let term = '';
         let deviation = '16118-75';
         if(material === '60C2А' || material === '51ХФА'){
@@ -38,34 +38,34 @@ document.addEventListener('DOMContentLoaded', function(){
                 context.fillText(height, 330, 195);
                 context.fillText('' + D, 510, 310);
                 context.fillText('' + d, 360, 420);
-                context.fillText(((height - d*(n+1-1.5)) / (number_circle + d)).toFixed(4), 380, 240);
+                context.fillText(((height - d*(n+1-1.5)) / (number_circle + d)).toFixed(1), 380, 240);
                 context.fillText('1. Направление навивки пружины : ' + direction, 170, 500);
                 context.fillText('2. Число рабочих витков : ' + n, 170, 515);
                 context.fillText('3. Число полный витков : ' + number_circle , 170, 530);
-                context.fillText('4. Жесткость : ' + C + ' *Н/м ', 170, 545);
+                context.fillText('4. Жесткость : ' + C + ' *Н/мм', 170, 545);
                 context.fillText('5. Термообработать : ' + term , 170, 560);
                 context.fillText('6. *Размеры и параметры для справок : ' + d + ' X ' + D + ' X ' + height + ' X ' + number_circle , 170, 575);
-                context.fillText('7. Остальные технические пребования и отклонения по ГОСТ : ' + deviation , 170, 590);
-                context.fillText('8. Покрытие : ' + surface, 170, 605);
+                // context.fillText('7. Остальные технические пребования и отклонения по ГОСТ : ' + deviation , 170, 590);
+                context.fillText('7. Покрытие : ' + surface, 170, 590);
                 context.fillText( d + ' X ' + D + ' X ' + height + ' X ' + number_circle, 450, 750);
                 context.fillText( material + ' - ' + d, 300, 860);
             }
             else if(type === 'торцованная'){
-                context.fillText((height - d*(n+1-1.5)).toFixed(4) + ' Н', 390, 90);
-                context.fillText(d*(n+1-1.5).toFixed(4), 290, 195);
+                context.fillText((height - d*(n+1-1.5)).toFixed(1) + '*Н', 390, 90);
+                context.fillText(d*(n+1-1.5).toFixed(1), 290, 195);
                 context.fillText(height, 340, 260);
-                context.fillText(((height - d*(n+1-1.5)) / (number_circle + d)).toFixed(4), 300, 300);
-                context.fillText((0.15 * d).toFixed(4), 530, 310);
+                context.fillText(((height - d*(n+1-1.5)) / (number_circle + d)).toFixed(1), 300, 300);
+                context.fillText((0.15 * d).toFixed(1), 530, 310);
                 context.fillText('' + D, 490, 360);
                 context.fillText('' + d, 340, 460);
                 context.fillText('1. Направление навивки пружины : ' + direction, 170, 500);
                 context.fillText('2. Число рабочих витков : ' + n, 170, 515);
                 context.fillText('3. Число полный витков : ' + number_circle , 170, 530);
-                context.fillText('4. Жесткость : ' + C  + ' *Н/м ', 170, 545);
+                context.fillText('4. Жесткость : ' + C  + ' *Н/мм ', 170, 545);
                 context.fillText('5. Термообработать : ' + term , 170, 560);
                 context.fillText('6. *Размеры и параметры для справок : ' + d + ' X ' + D + ' X ' + height + ' X ' + number_circle , 170, 575);
-                context.fillText('7. Остальные технические пребования и отклонения по ГОСТ : ' + deviation , 170, 590);
-                context.fillText('8. Покрытие : ' + surface, 170, 605);
+                // context.fillText('7. Остальные технические пребования и отклонения по ГОСТ : ' + deviation , 170, 590);
+                context.fillText('7. Покрытие : ' + surface, 170, 590);
                 context.fillText( d + ' X ' + D + ' X ' + height + ' X ' + number_circle, 450, 750);
                 context.fillText( material + ' - ' + d, 300, 860);
             }
@@ -73,15 +73,15 @@ document.addEventListener('DOMContentLoaded', function(){
                 context.fillText(height, 330, 195);
                 context.fillText('' + D, 510, 310);
                 context.fillText('' + d, 360, 420);
-                context.fillText(((height - d*(n+1-1.5)) / (number_circle + d)).toFixed(4), 380, 240);
+                context.fillText(((height - d*(n+1-1.5)) / (number_circle + d)).toFixed(1), 380, 240);
                 context.fillText('1. Направление навивки пружины : ' + direction, 170, 500);
                 context.fillText('2. Число рабочих витков : ' + n, 170, 515);
                 context.fillText('3. Число полный витков : ' + number_circle , 170, 530);
-                context.fillText('4. Жесткость : ' + C  + ' *Н/м ', 170, 545);
+                context.fillText('4. Жесткость : ' + C  + ' *Н/мм ', 170, 545);
                 context.fillText('5. Термообработать : ' + term , 170, 560);
                 context.fillText('6. *Размеры и параметры для справок : ' + d + ' X ' + D + ' X ' + height + ' X ' + number_circle , 170, 575);
-                context.fillText('7. Остальные технические пребования и отклонения по ГОСТ : ' + deviation , 170, 590);
-                context.fillText('8. Покрытие : ' + surface, 170, 605);
+                // context.fillText('7. Остальные технические пребования и отклонения по ГОСТ : ' + deviation , 170, 590);
+                context.fillText('7. Покрытие : ' + surface, 170, 590);
                 context.fillText( d + ' X ' + D + ' X ' + height + ' X ' + number_circle, 450, 750);
                 context.fillText( material + ' - ' + d, 300, 860);
             }
