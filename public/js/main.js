@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 context.fillText('3. Число полный витков : ' + number_circle , 170, 530);
                 context.fillText('4. Жесткость : ' + C + ' *Н/мм', 170, 545);
                 context.fillText('5. Термообработать : ' + term , 170, 560);
-                context.fillText('6. *Размеры и параметры для справок : ' + d + ' X ' + D + ' X ' + height + ' X ' + number_circle , 170, 575);
+                context.fillText('6. *Размеры и параметры для справок', 170, 575);
                 // context.fillText('7. Остальные технические пребования и отклонения по ГОСТ : ' + deviation , 170, 590);
                 context.fillText('7. Покрытие : ' + surface, 170, 590);
                 context.fillText( d + ' X ' + D + ' X ' + height + ' X ' + number_circle, 450, 750);
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 context.fillText('3. Число полный витков : ' + number_circle , 170, 530);
                 context.fillText('4. Жесткость : ' + C  + ' *Н/мм ', 170, 545);
                 context.fillText('5. Термообработать : ' + term , 170, 560);
-                context.fillText('6. *Размеры и параметры для справок : ' + d + ' X ' + D + ' X ' + height + ' X ' + number_circle , 170, 575);
+                context.fillText('6. *Размеры и параметры для справок', 170, 575);
                 // context.fillText('7. Остальные технические пребования и отклонения по ГОСТ : ' + deviation , 170, 590);
                 context.fillText('7. Покрытие : ' + surface, 170, 590);
                 context.fillText( d + ' X ' + D + ' X ' + height + ' X ' + number_circle, 450, 750);
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 context.fillText('3. Число полный витков : ' + number_circle , 170, 530);
                 context.fillText('4. Жесткость : ' + C  + ' *Н/мм ', 170, 545);
                 context.fillText('5. Термообработать : ' + term , 170, 560);
-                context.fillText('6. *Размеры и параметры для справок : ' + d + ' X ' + D + ' X ' + height + ' X ' + number_circle , 170, 575);
+                context.fillText('6. *Размеры и параметры для справок' , 170, 575);
                 // context.fillText('7. Остальные технические пребования и отклонения по ГОСТ : ' + deviation , 170, 590);
                 context.fillText('7. Покрытие : ' + surface, 170, 590);
                 context.fillText( d + ' X ' + D + ' X ' + height + ' X ' + number_circle, 450, 750);
