@@ -28,7 +28,7 @@ class Main extends Controller
         $class->image = $nameImage;
         $class->info = $contact;
 
-        Mail::to($mail)->send(new Mailer($class));
+        Mail::to('darslinger@mail.ru')->send(new Mailer($class));
         return view('success');
     }
 }

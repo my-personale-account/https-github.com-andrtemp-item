@@ -13,7 +13,7 @@
                         </label>
                         <select name="type" id="type" class="form-control">
                             <option disabled selected></option>
-                            <option value="не торцованная">не торцованная</option>
+                            <option value="не шлифованая">не шлифованая</option>
                             <option value="торцованная">торцованная</option>
                             <option value="спираль">спираль</option>
                         </select>
@@ -82,12 +82,6 @@
                             <option value="Левое"> Левое</option>
                             <option value="Любое"> Любое</option>
                         </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="mail">
-                            E-mail
-                        </label>
-                        <input type="email" name="mail" id="mail" class="form-control" data-value="mail"/>
                     </div>
                     <div class="form-group">
                         <label for="contact">
